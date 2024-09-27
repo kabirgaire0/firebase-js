@@ -1,0 +1,45 @@
+Web / API server started at 127.0.0.1:4000
+Web / API server started at ::1:4000
+
+  #  node[1353240]: void node::ResetStdio() at ../src/node.cc:734
+  #  Assertion failed: !(err != 0) || (err == -1 && (*__errno_location ()) == 1)
+
+----- Native stack trace -----
+
+ 1: 0xf66937 node::Assert(node::AssertionInfo const&) [node]
+ 2: 0xf157d4  [node]
+ 3: 0xf1597c node::SignalExit(int, siginfo_t*, void*) [node]
+ 4: 0x797b5c442520  [/lib/x86_64-linux-gnu/libc.so.6]
+ 5: 0x797b5c525b68 epoll_pwait [/lib/x86_64-linux-gnu/libc.so.6]
+ 6: 0x1e6e5e2  [node]
+ 7: 0x1e5a6e7 uv_run [node]
+ 8: 0xe6bd46 node::SpinEventLoopInternal(node::Environment*) [node]
+ 9: 0xfb9364  [node]
+10: 0xfb9dfd node::NodeMainInstance::Run() [node]
+11: 0xf1d3eb node::Start(int, char**) [node]
+12: 0x797b5c429d90  [/lib/x86_64-linux-gnu/libc.so.6]
+13: 0x797b5c429e40 __libc_start_main [/lib/x86_64-linux-gnu/libc.so.6]
+14: 0xe67fee _start [node]
+FATAL ERROR: v8::HandleScope::CreateHandle() Cannot create a handle without a HandleScope
+----- Native stack trace -----
+
+ 1: 0xe18e68 node::OnFatalError(char const*, char const*) [node]
+ 2: 0x120f8f6 v8::Utils::ReportApiFailure(char const*, char const*) [node]
+ 3: 0x13be77a v8::internal::HandleScope::Extend(v8::internal::Isolate*) [node]
+ 4: 0x12111b0 v8::EscapableHandleScopeBase::EscapableHandleScopeBase(v8::Isolate*) [node]
+ 5: 0xf66876 node::GetCurrentStackTrace(v8::Isolate*, int) [node]
+ 6: 0xeb728b node::DumpJavaScriptBacktrace(_IO_FILE*) [node]
+ 7: 0xf66943 node::Assert(node::AssertionInfo const&) [node]
+ 8: 0xf157d4  [node]
+ 9: 0xf1597c node::SignalExit(int, siginfo_t*, void*) [node]
+10: 0x797b5c442520  [/lib/x86_64-linux-gnu/libc.so.6]
+11: 0x797b5c525b68 epoll_pwait [/lib/x86_64-linux-gnu/libc.so.6]
+12: 0x1e6e5e2  [node]
+13: 0x1e5a6e7 uv_run [node]
+14: 0xe6bd46 node::SpinEventLoopInternal(node::Environment*) [node]
+15: 0xfb9364  [node]
+16: 0xfb9dfd node::NodeMainInstance::Run() [node]
+17: 0xf1d3eb node::Start(int, char**) [node]
+18: 0x797b5c429d90  [/lib/x86_64-linux-gnu/libc.so.6]
+19: 0x797b5c429e40 __libc_start_main [/lib/x86_64-linux-gnu/libc.so.6]
+20: 0xe67fee _start [node]

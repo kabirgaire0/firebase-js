@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": "test-20240703"
+  },
+  "dataconnectEmulatorConfig": {
+    "postgres": {
+      "localConnectionString": "postgresql://localhost:5432?sslmode=disable"
+    }
+  }
+}

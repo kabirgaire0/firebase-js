@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "staging": "test-20240703"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
